@@ -1,0 +1,14 @@
+{
+  "header_users": "Пользователи",
+  "user_info": "О пользователе",
+  "logout": "Выйти",
+  "login": "Войти",
+  "users_name": "Имя",
+  "users_birthdate": "Дата рождения",
+  "users_sex": "Пол",
+  "users_adress": "Адрес",
+  "users_phone": "Телефон",
+  "login_header": "Авторизация",
+  "users_page": "Пользователи",
+  "choose_user": "Выберите пользователя чтобы увидеть подробную информацию"
+}

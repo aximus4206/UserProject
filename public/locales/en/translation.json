@@ -1,0 +1,14 @@
+{
+  "header_users": "Users",
+  "user_info": "User info",
+  "logout": "Log out",
+  "login": "Log in",
+  "users_name": "Name",
+  "users_birthdate": "Birth date",
+  "users_sex": "Sex",
+  "users_adress": "Adress",
+  "users_phone": "Phone number",
+  "login_header": "Log in",
+  "users_page": "Users",
+  "choose_user": "Select a user to see detailed information"
+}
