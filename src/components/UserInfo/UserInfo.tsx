@@ -1,10 +1,17 @@
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { IUser } from '../../interfaces/usersInterfaces';
+import { getUsers } from '../../redux/users/usersSelectors';
 import styles from './UserInfo.module.scss';
 
 
-export const UserInfo = ({ user }: { user: IUser }) => {
+const UserInfo = () => {
     const {t} = useTranslation();
+    const users = useSelector(getUsers);
+    const { id } = useParams();
+  
+    const user = users.find(user => user.login.uuid === id) as IUser;
 
     return (
         <div className={`${styles.userBox}`}>

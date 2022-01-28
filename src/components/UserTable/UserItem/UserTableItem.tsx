@@ -14,7 +14,6 @@ const User = ({user}: IProps) => {
             <NavLink
                 className={styles.person__link}
                 to={`${Path.USER_INFO}/${user.login.uuid}`}
-                state={user}
             >
               <div className={styles.photo_container}>
               <img
