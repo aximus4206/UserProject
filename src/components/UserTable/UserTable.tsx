@@ -17,10 +17,9 @@ const UserTable = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
-    dispatch(fetchUsersRequest());
-  }, [dispatch]);
-
-  useEffect(() => {
+    if (users.length < 20) {
+      dispatch(fetchUsersRequest());
+    }
     if (fetching) {
       let page = Number(searchParams.get('page'));
       page += 1;
@@ -28,7 +27,7 @@ const UserTable = () => {
       setSearchParams(`page=${page}`);
       setFetching(false);
     }
-  }, [fetching, dispatch, setSearchParams, searchParams ]);
+  }, [fetching, dispatch, setSearchParams, searchParams, users.length ]);
 
   useEffect(() => {
     document.addEventListener('scroll', scrollHandler);
@@ -39,15 +38,15 @@ const UserTable = () => {
 
   const scrollHandler = (event: Event) => {
     const target = (event.target as Document).documentElement;
-    if (target.scrollHeight - (target.scrollTop + window.innerHeight) < 100) {
+    if (target.scrollHeight - (target.scrollTop + window.innerHeight) < 1) {
       setFetching(true);
     }
   };
 
   return (
     <div className={styles.user_table}>
-      {users.map(user => (
-        <User key={user.login.uuid} user={user} />
+      {users.map((user, index) => (
+        <User key={index} user={user} />
       ))}
     </div>
   );

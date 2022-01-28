@@ -1,11 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { Path } from '../../constants/Path';
-// import LoginPage from '../../pages/LoginPage/LoginPage';
-// import UserInfoPage from '../../pages/UserInfoPage/UserInfoPage';
-// import UsersPage from '../../pages/UsersPage/UsersPage';
 import styles from './Main.module.scss';
 import { Navigate } from 'react-router-dom';
-// import { PublicRoute } from '../PublicRoute/PublicRoute';
 import { lazy, Suspense } from 'react';
 import { PublicRoute } from '../PublicRoute/PublicRoute';
 import { PrivateRoute } from '../PrivateRoute/PrivateRoute';
